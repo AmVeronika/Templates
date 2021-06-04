@@ -1,0 +1,21 @@
+.services {
+   padding: 195px 0 150px;
+   &__wrapp {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, 350px);
+      text-align: center;
+   }
+   &__item {
+      padding: 59px 0;
+      background: #f7f7f7;
+      text-align: center;
+      &-img {
+         margin-bottom: 30px;
+      }
+      .services-h5 {
+         max-width: 172px;
+         margin: 0 auto;
+      }
+   }
+}

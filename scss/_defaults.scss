@@ -1,0 +1,119 @@
+//COLORS
+$white: #ffffff;
+$accent: #f7654a;
+$gray: #999999;
+$darkgray: #404149;
+
+// FONTS
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Oswald:wght@500;700&display=swap");
+
+$fontfamily_oswald: "Oswald";
+$font-family_open: "Open Sans";
+
+$fontweight: (
+   regular: 400,
+   medium: 500,
+   bold: 700,
+);
+
+$fontsize: (
+   h1: 64px,
+   h2: 48px,
+   h3: 36px,
+   h4: 24px,
+   h5: 21px,
+   textbig: 18px,
+   textplus: 16px,
+   text: 14px,
+);
+
+$texttransform: (
+   none: none,
+   cap: capitalize,
+   upper: uppercase,
+);
+
+// Nixit for font style
+@mixin fontstyle($fw, $fs, $tt) {
+   @if map-has-key($fontweight, $fw) {
+      font-weight: #{map-get($fontweight, $fw)};
+   } @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$fw}`. "
+         + "Please make sure it is defined in `$breakpoints` map.";
+   }
+   @if map-has-key($fontsize, $fs) {
+      font-size: #{map-get($fontsize, $fs)};
+   } @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$fs}`. "
+         + "Please make sure it is defined in `$breakpoints` map.";
+   }
+   @if map-has-key($texttransform, $tt) {
+      text-transform: #{map-get($texttransform, $tt)};
+   } @else {
+      @warn "Unfortunately, no value could be retrieved from `#{$tt}`. "
+         + "Please make sure it is defined in `$breakpoints` map.";
+   }
+}
+
+// Example
+
+//  .featur-item__h4 {
+//    @include fontstyle(semibold, h4, cap);
+// }
+
+// .featur-item__text {
+//    @include fontstyle(regular, 0, cap);
+//    font-size: 15px;
+// }
+// .featur-item {
+//    @each $font, $size in $fontsize {
+      // &__#{$font} {
+//          font-size: $size;
+//       }
+//    }
+// }
+
+// MEDIA
+// $level_1: 1170px;
+// $level_2: 1100px;
+// $level_3: 1000px;
+// $level_4: 900px;
+// $level_5: 800px;
+// $level_6: 700px;
+// $level_7: 600px;
+$level_8: 450px;
+$level_9: 374px;
+
+// WIDTH
+$desktopwidth: 1110px;
+
+.container {
+   max-width: $desktopwidth + 30px;
+   margin: 0 auto;
+   padding: 0 15px;
+   @media (max-width: $level_8) {
+      padding: 0 8px;
+   }
+}
+
+section,
+article,
+header,
+main,
+footer,
+aside {
+   display: block;
+}
+
+body {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   font-family: $fontfamily_oswald;
+   min-width: $level_9;
+   min-height: 100vh;
+}
+
+.main {
+   flex-grow: 1;
+}

@@ -1,0 +1,26 @@
+.project {
+   padding: 250px 0 150px;
+   &__wrapp {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, 350px);
+   }
+   &__card {
+      display: grid;
+      &-img {
+         cursor: pointer;
+         width: 100%;
+      }
+      &-info {
+         display: grid;
+         grid-template-rows: min-content 1fr min-content;
+         margin: 45px 0 20px;
+         .reactangle {
+            width: 55px;
+            height: 6px;
+            background: $accent;
+            
+         }
+      }
+   }
+}

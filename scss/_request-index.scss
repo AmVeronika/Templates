@@ -1,0 +1,27 @@
+.request {
+   background: $accent;
+   &__wrapp {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .request-h2 {
+         max-width: 600px;
+         padding: 30px 0 45px;
+      }
+      .h3-span {
+         @include fontstyle(bold, h4, upper);
+         color: $white;
+         line-height: 36px;
+      }
+      &-button {
+         @include fontstyle(medium, text, upper);
+         line-height: 21px;
+         letter-spacing: 0.05em;
+         height: 50px;
+         padding: 0 30px;
+      }
+      &-img {
+         margin-right: 15px;
+      }
+   }
+}

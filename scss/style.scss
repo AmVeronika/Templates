@@ -1,0 +1,44 @@
+@import "_nullstyle.scss";
+@import "_defaults.scss";
+@import "_header-index.scss";
+@import "_project-index.scss";
+@import "_request-index.scss";
+@import "_service-index.scss";
+@import "_media.scss";
+
+.h1 {
+   @include fontstyle(medium, h1, upper);
+   color: $white;
+   line-height: 95px;
+   letter-spacing: 2px;
+}
+.h2 {
+   @include fontstyle(bold, h2, upper);
+   color: $white;
+   line-height: 72px;
+}
+.h3 {
+   @include fontstyle(medium, h3, upper);
+   color: $darkgray;
+   line-height: 54px;
+   text-align: center;
+   margin-bottom: 60px;
+}
+.h4 {
+   @include fontstyle(medium, h4, upper);
+   line-height: 34px;
+   color: $darkgray;
+   margin: 15px 0 20px;
+}
+.h5 {
+   @include fontstyle(medium, h5, upper);
+   line-height: 31px;
+   letter-spacing: 0.02em;
+
+}
+.textplus {
+   @include fontstyle(regular, textplus, none);
+   font-family: $font-family_open;
+   line-height: 22px;
+   color: $gray;
+}
