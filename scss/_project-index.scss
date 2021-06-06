@@ -1,26 +1,88 @@
 .project {
    padding: 250px 0 150px;
+   position: relative;
    &__wrapp {
       display: grid;
       gap: 30px;
       grid-template-columns: repeat(auto-fit, 350px);
+      justify-content: center;
    }
    &__card {
-      display: grid;
+      margin-bottom: 20px;
       &-img {
          cursor: pointer;
          width: 100%;
       }
-      &-info {
-         display: grid;
-         grid-template-rows: min-content 1fr min-content;
-         margin: 45px 0 20px;
-         .reactangle {
-            width: 55px;
-            height: 6px;
-            background: $accent;
-            
-         }
-      }
+   }
+   .project__card:hover {
+      transform: scale(1.02);
+      transition: 0.1s linear;
+   }
+   // Polsunok
+   input[type="range"] {
+      overflow: hidden;
+      width: 100%;
+      height: 8px;
+      -webkit-appearance: none;
+      background-color: transparent;
+      cursor: pointer;
+      padding: 40px 0;
+   }
+
+   input[type="range"]::-webkit-slider-runnable-track {
+      height: 10px;
+      -webkit-appearance: none;
+      color: transparent;
+      margin-top: -1px;
+   }
+
+   input[type="range"]::-webkit-slider-thumb {
+      width: 25%;
+      -webkit-appearance: none;
+      height: 8px;
+      cursor: pointer;
+      background: $accent;
+   }
+   input[type="range"]::-webkit-slider-thumb:hover {
+      box-shadow: 2px 2px 18px rgb(221, 113, 113);
+      transition: 0.1s linear;
+   }
+}
+
+input[type="range"]::-moz-range-progress {
+   background-color: transparent;
+}
+input[type="range"]::-moz-range-track {
+   background-color: transparent;
+}
+input[type="range"]::-ms-fill-lower {
+   background-color: transparent;
+}
+input[type="range"]::-ms-fill-upper {
+   background-color: transparent;
+}
+
+// Polsunok END
+
+.project__number {
+  opacity: 0;
+   position: absolute;
+   top: -115px;
+   left: 50%;
+   transform: translate(-50%);
+   background: #f7f7f7;
+   display: grid;
+   grid-template-columns: repeat(auto-fit, 190px);
+   justify-content: center;
+   gap: 30px;
+   text-align: center;
+   padding: 57px 0; 
+ 
+   &-year {
+      color: $accent;
+   }
+   .h3-number {
+      color: black;
+      margin: 0 0 10px;
    }
 }

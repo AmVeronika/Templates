@@ -1,0 +1,7 @@
+.portfolio {
+   display: grid;
+   grid-template-columns: repeat(4, minmax(200px, 1fr));
+   &__img {
+      width: 100%;
+   }
+}

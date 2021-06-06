@@ -1,0 +1,45 @@
+.footer {
+   margin-top: 100px;
+   .contacts {
+      margin-bottom: 150px;
+      .h3-container,
+      .h4-container {
+         color: black;
+      }
+      .h4-margin {
+         margin: 0;
+      }
+      .h4-container-hover:hover {
+         color: $accent;
+      }
+      &__wrapp {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, 255px);
+         gap: 30px;
+         text-align: center;
+         &-item {
+            display: grid;
+            grid-template-rows: 50px 50px 100px;
+            justify-items: center;
+            gap: 30px;
+         }
+         &-img {
+            transition: 0.1s linear;
+         }
+      }
+
+      .contacts__wrapp-img:hover {
+         transform: scale(1.5);
+         transition: 0.1s linear;
+      }
+   }
+   &__bottom {
+      padding-top: 30px;
+      padding-bottom: 30px;
+      background: $darkgray;
+      &-wrapp {
+         display: flex;
+         justify-content: space-between;
+      }
+   }
+}

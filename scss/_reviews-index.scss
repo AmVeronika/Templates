@@ -1,0 +1,30 @@
+.reviews {
+   margin: 150px 0;
+   .h3-reviews {
+      color: black;
+   }
+   &__wrapp {
+      display: grid;
+      gap: 30px;
+      grid-template-columns: repeat(auto-fit, 350px);
+      justify-content: center;
+      &-text {
+         background: #f7f7f7;
+         padding: 38px 30px;
+         margin-bottom: 30px;
+         cursor: pointer;
+         transition: 0.1s linear;
+      }
+      &-text:hover {
+         background: rgb(255, 241, 241);
+         box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.3);
+         transition: 0.1s linear;
+      }
+      &-quotes {
+         padding-bottom: 10px;
+      }
+      .company-reviews {
+         color: $accent;
+      }
+   }
+}

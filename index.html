@@ -6,14 +6,12 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="css/style.css">
-   <!--FONTAWESOME-->
-   <script src="https://kit.fontawesome.com/339d5aa3dd.js" crossorigin="anonymous"></script>
    <title>Templates</title>
 </head>
 
 <body>
    <!-- header -->
-   <header class="header">
+   <header class="header burger-anchor">
       <div class="container">
          <div class="header__menu">
             <!-- left container -->
@@ -32,13 +30,25 @@
             </div>
             <!-- right container -->
             <nav class="header__nav">
-               <svg class="header__burger" width="21" height="18" viewBox="0 0 21 18" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                     d="M20.5714 15.4286C20.5714 14.9598 20.183 14.5714 19.7143 14.5714H0.857143C0.388393 14.5714 0 14.9598 0 15.4286V17.1429C0 17.6116 0.388393 18 0.857143 18H19.7143C20.183 18 20.5714 17.6116 20.5714 17.1429V15.4286ZM20.5714 8.57143C20.5714 8.10268 20.183 7.71428 19.7143 7.71428H0.857143C0.388393 7.71428 0 8.10268 0 8.57143V10.2857C0 10.7545 0.388393 11.1429 0.857143 11.1429H19.7143C20.183 11.1429 20.5714 10.7545 20.5714 10.2857V8.57143ZM20.5714 1.71428C20.5714 1.24553 20.183 0.857142 19.7143 0.857142H0.857143C0.388393 0.857142 0 1.24553 0 1.71428V3.42857C0 3.89732 0.388393 4.28571 0.857143 4.28571H19.7143C20.183 4.28571 20.5714 3.89732 20.5714 3.42857V1.71428Z"
-                     fill="white" />
-               </svg>
+               <!-- menu burger -->
+               <input id="menu__toggle" type="checkbox" />
+               <label class="header__nav-btn" for="menu__toggle">
+                  <svg class="header__nav-burger" width="21" height="18" viewBox="0 0 21 18" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M20.5714 15.4286C20.5714 14.9598 20.183 14.5714 19.7143 14.5714H0.857143C0.388393 14.5714 0 14.9598 0 15.4286V17.1429C0 17.6116 0.388393 18 0.857143 18H19.7143C20.183 18 20.5714 17.6116 20.5714 17.1429V15.4286ZM20.5714 8.57143C20.5714 8.10268 20.183 7.71428 19.7143 7.71428H0.857143C0.388393 7.71428 0 8.10268 0 8.57143V10.2857C0 10.7545 0.388393 11.1429 0.857143 11.1429H19.7143C20.183 11.1429 20.5714 10.7545 20.5714 10.2857V8.57143ZM20.5714 1.71428C20.5714 1.24553 20.183 0.857142 19.7143 0.857142H0.857143C0.388393 0.857142 0 1.24553 0 1.71428V3.42857C0 3.89732 0.388393 4.28571 0.857143 4.28571H19.7143C20.183 4.28571 20.5714 3.89732 20.5714 3.42857V1.71428Z"
+                        fill="white" />
+                  </svg>
+               </label>
+               <ul class="header__nav-box">
+                  <li class="h4 h4-burger-hover" data-id="0">ГЛАВНАЯ</li>
+                  <li class="h4 h4-burger-hover" data-id="1">ПРОЕКТЫ</li>
+                  <li class="h4 h4-burger-hover" data-id="2">ГАЛЕРЕЯ</li>
+                  <li class="h4 h4-burger-hover" data-id="3">ОТЗЫВЫ</li>
+                  <li class="h4 h4-burger-hover" data-id="4">КОНТАКТЫ</li>
+               </ul>
             </nav>
+            <!-- menu burger EXIT -->
          </div>
          <div class="header__name">
             <h1 class="h1">РЕАЛИЗУЕМ КРУПНЕЙШИЕ
@@ -51,38 +61,60 @@
 
    </header>
    <!-- Project  -->
-   <section class="project">
+   <section class="project burger-anchor">
+      <div class="container project__number">
+         <div class="project__number-iem">
+            <p class="h1 project__number-year">26</p>
+            <p class="h3 h3-number">ЛЕТ</p>
+            <p class="textbig">на рынке</p>
+         </div>
+         <div class="project__number-iem">
+            <p class="h1 project__number-year">26</p>
+            <p class="h3 h3-number">ЛЕТ</p>
+            <p class="textbig">на рынке</p>
+         </div>
+         <div class="project__number-iem">
+            <p class="h1 project__number-year">26</p>
+            <p class="h3 h3-number">ЛЕТ</p>
+            <p class="textbig">на рынке</p>
+         </div>
+         <div class="project__number-iem">
+            <p class="h1 project__number-year">26</p>
+            <p class="h3 h3-number">ЛЕТ</p>
+            <p class="textbig">на рынке</p>
+         </div>
+      </div>
       <div class="container">
          <h3 class="h3">НАШИ САМЫЕ БОЛЬШИЕ ПРОЕКТЫ
          </h3>
          <article class="project__wrapp">
-            <a class="project__card" href="#">
-               <img class="project__card-img" src="img/project-arena.jpg" alt="project" width="350" ; height="350">
-               <div class="project__card-info">
-                  <p class="reactangle"></p>
-                  <h4 class="h4">Газпром Арена</h4>
-                  <p class="textplus">Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной
-                     точкой для разивтия на следующие десятилетия. Мы очень рады данному.</p>
-               </div>
-            </a>
-            <a class="project__card" href="#">
-               <img class="project__card-img" src="img/project-arena.jpg" alt="project" width="350" ; height="350">
-               <div class="project__card-info">
-                  <p class="reactangle"></p>
-                  <h4 class="h4">Газпром Арена</h4>
-                  <p class="textplus">Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной
-                     точкой для разивтия на следующие десятилетия. Мы очень рады данному.</p>
-               </div>
-            </a>
-            <a class="project__card" href="#">
-               <img class="project__card-img" src="img/project-arena.jpg" alt="project" width="350" ; height="350">
-               <div class="project__card-info">
-                  <p class="reactangle"></p>
-                  <h4 class="h4">Газпром Арена</h4>
-                  <p class="textplus">Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной
-                     точкой для разивтия на следующие десятилетия. Мы очень рады данному.</p>
-               </div>
-            </a>
+            <div class="project__card">
+               <a class="project__card-link" href="#">
+                  <img class="project__card-img" src="img/project-arena.jpg" alt="project" width="350" ; height="350">
+               </a>
+               <input class="reactangle" type="range" min="0" max="3" step="1" value="0">
+               <h4 class="h4">Газпром Арена</h4>
+               <p class="textplus">Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной
+                  точкой для разивтия на следующие десятилетия. Мы очень рады данному.</p>
+            </div>
+            <div class="project__card">
+               <a class="project__card-link" href="#">
+                  <img class="project__card-img" src="img/project-arena.jpg" alt="project" width="350" ; height="350">
+               </a>
+               <input class="reactangle" type="range" min="0" max="3" step="1" value="0">
+               <h4 class="h4">Газпром Арена</h4>
+               <p class="textplus">Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной
+                  точкой для разивтия на следующие десятилетия. Мы очень рады данному.</p>
+            </div>
+            <div class="project__card">
+               <a class="project__card-link" href="#">
+                  <img class="project__card-img" src="img/project-arena.jpg" alt="project" width="350" ; height="350">
+               </a>
+               <input class="reactangle" type="range" min="0" max="3" step="1" value="0">
+               <h4 class="h4">Газпром Арена</h4>
+               <p class="textplus">Мы сделали самую красивую арену в Европе. Это открытие стало для нас прорывной
+                  точкой для разивтия на следующие десятилетия. Мы очень рады данному.</p>
+            </div>
          </article>
       </div>
    </section>
@@ -93,7 +125,7 @@
             <h2 class="h2 request-h2">САМЫЕ УМНЫЕ ПРОЕКТЫ <br><span class="h3-span">РЕАЛИЗУЕМ САМЫЕ СМЕЛЫЕ РЕШЕНИЯ В
                   РОССИИ!</span>
             </h2>
-            <button class="request__wrapp-button" type="button">
+            <button class="request__wrapp-button btn-hover" type="button">
                <svg class="request__wrapp-img" width="18" height="15" viewBox="0 0 18 15" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -106,7 +138,7 @@
       </div>
    </div>
    <!-- Services   -->
-   <div class="services">
+   <section class="services">
       <div class="container">
          <h3 class="h3">ЧЕМ МЫ ЗАНИМАЕМСЯ?</h3>
          <article class="services__wrapp">
@@ -117,7 +149,7 @@
                      d="M22.875 36H19.125C18.4688 36 18 36.5625 18 37.125V40.875C18 41.5312 18.4688 42 19.125 42H22.875C23.4375 42 24 41.5312 24 40.875V37.125C24 36.5625 23.4375 36 22.875 36ZM22.875 18H19.125C18.4688 18 18 18.5625 18 19.125V22.875C18 23.5312 18.4688 24 19.125 24H22.875C23.4375 24 24 23.5312 24 22.875V19.125C24 18.5625 23.4375 18 22.875 18ZM13.875 18H10.125C9.46875 18 9 18.5625 9 19.125V22.875C9 23.5312 9.46875 24 10.125 24H13.875C14.4375 24 15 23.5312 15 22.875V19.125C15 18.5625 14.4375 18 13.875 18ZM13.875 36H10.125C9.46875 36 9 36.5625 9 37.125V40.875C9 41.5312 9.46875 42 10.125 42H13.875C14.4375 42 15 41.5312 15 40.875V37.125C15 36.5625 14.4375 36 13.875 36ZM13.875 27H10.125C9.46875 27 9 27.5625 9 28.125V31.875C9 32.5312 9.46875 33 10.125 33H13.875C14.4375 33 15 32.5312 15 31.875V28.125C15 27.5625 14.4375 27 13.875 27ZM22.875 27H19.125C18.4688 27 18 27.5625 18 28.125V31.875C18 32.5312 18.4688 33 19.125 33H22.875C23.4375 33 24 32.5312 24 31.875V28.125C24 27.5625 23.4375 27 22.875 27ZM49.875 36H46.125C45.4688 36 45 36.5625 45 37.125V40.875C45 41.5312 45.4688 42 46.125 42H49.875C50.4375 42 51 41.5312 51 40.875V37.125C51 36.5625 50.4375 36 49.875 36ZM49.875 27H46.125C45.4688 27 45 27.5625 45 28.125V31.875C45 32.5312 45.4688 33 46.125 33H49.875C50.4375 33 51 32.5312 51 31.875V28.125C51 27.5625 50.4375 27 49.875 27ZM57.75 18H48V2.25C48 1.03125 46.9688 0 45.75 0H26.25C24.9375 0 24 1.03125 24 2.25V9H21V1.5C21 0.75 20.25 0 19.5 0H18C17.1562 0 16.5 0.75 16.5 1.5V9H10.5V1.5C10.5 0.75 9.75 0 9 0H7.5C6.65625 0 6 0.75 6 1.5V9H2.25C0.9375 9 0 10.0312 0 11.25V46.5C0 47.3438 0.65625 48 1.5 48H3C3.75 48 4.5 47.3438 4.5 46.5V13.5H28.5V4.5H43.5V22.5H55.5V46.5C55.5 47.3438 56.1562 48 57 48H58.5C59.25 48 60 47.3438 60 46.5V20.25C60 19.0312 58.9688 18 57.75 18ZM37.875 9H34.125C33.4688 9 33 9.5625 33 10.125V13.875C33 14.5312 33.4688 15 34.125 15H37.875C38.4375 15 39 14.5312 39 13.875V10.125C39 9.5625 38.4375 9 37.875 9ZM37.875 27H34.125C33.4688 27 33 27.5625 33 28.125V31.875C33 32.5312 33.4688 33 34.125 33H37.875C38.4375 33 39 32.5312 39 31.875V28.125C39 27.5625 38.4375 27 37.875 27ZM37.875 18H34.125C33.4688 18 33 18.5625 33 19.125V22.875C33 23.5312 33.4688 24 34.125 24H37.875C38.4375 24 39 23.5312 39 22.875V19.125C39 18.5625 38.4375 18 37.875 18Z"
                      fill="#F7654A" />
                </svg>
-               <h5 class="h5">СТРОИТЕЛЬСТВО
+               <h5 class="h5 services-h5">СТРОИТЕЛЬСТВО
                   ОФИСНЫХ ЗДАНИЙ</h5>
             </div>
             <div class="services__item">
@@ -172,7 +204,206 @@
             </div>
          </article>
       </div>
+   </section>
+   <!-- Portfolio -->
+   <article class="portfolio burger-anchor">
+      <img class="portfolio__img" src="img/portfolio-img.jpg" alt="0">
+      <img class="portfolio__img" src="img/portfolio-img.jpg" alt="1">
+      <img class="portfolio__img" src="img/portfolio-img.jpg" alt="2">
+      <img class="portfolio__img" src="img/portfolio-img.jpg" alt="3">
+      <img class="portfolio__img" src="img/portfolio-img.jpg" alt="4">
+      <img class="portfolio__img" src="img/portfolio-img.jpg" alt="5">
+      <img class="portfolio__img" src="img/portfolio-img.jpg" alt="6">
+      <img class="portfolio__img" src="img/portfolio-img.jpg" alt="7">
+   </article>
+   <!-- Question -->
+   <div class="question">
+      <div class="container">
+         <section class="question__block">
+            <h3 class="h3 h3-question">ОТВЕТЫ НА ВОПРОСЫ</h3>
+            <article class="question__block-details">
+               <details class="question__block-open">
+                  <summary class="question__block-summary h4"> РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?
+                     <p class="textplus textplus-question">Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+                        вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+                        В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя
+                        Lorem Ipsum для распечатки образцов.</p>
+                  </summary>
+               </details>
+               <details class="question__block-open" open>
+                  <summary class="question__block-summary h4"> РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?
+                     <p class="textplus textplus-question">Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+                        вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+                        В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя
+                        Lorem Ipsum для распечатки образцов.</p>
+                  </summary>
+               </details>
+               <details class="question__block-open">
+                  <summary class="question__block-summary h4"> РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?
+                     <p class="textplus textplus-question">Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+                        вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+                        В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя
+                        Lorem Ipsum для распечатки образцов.</p>
+                  </summary>
+               </details>
+               <details class="question__block-open">
+                  <summary class="question__block-summary h4"> РАБОТАЕТЕ ЛИ ВЫ ПО 249 ФЗ?
+                     <p class="textplus textplus-question">Lorem Ipsum - это текст-"рыба", часто используемый в печати и
+                        вэб-дизайне. Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века.
+                        В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя
+                        Lorem Ipsum для распечатки образцов.</p>
+                  </summary>
+               </details>
+            </article>
+         </section>
+      </div>
    </div>
+   <!-- Partners -->
+   <div class="partners">
+      <div class="container">
+         <h3 class="h3 h3-partners">НАШИ ПАРТНЁРЫ</h3>
+         <action class="partners__wrapp">
+            <img src="img/partners.png" alt="" class="partners__wrapp-img">
+            <img src="img/partners.png" alt="" class="partners__wrapp-img">
+            <img src="img/partners.png" alt="" class="partners__wrapp-img">
+            <img src="img/partners.png" alt="" class="partners__wrapp-img">
+         </action>
+      </div>
+   </div>
+   <!-- Reviews -->
+   <section class="reviews burger-anchor">
+      <div class="container">
+         <h3 class="h3 h3-reviews">ОТЗЫВЫ О РАБОТЕ С НАМИ</h3>
+         <div class="reviews__wrapp">
+            <div class="reviews__wrapp-item">
+               <div class="reviews__wrapp-text">
+                  <svg class="reviews__wrapp-quotes" width="34" height="28" viewBox="0 0 34 28" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M0.208 27.736C0.208 24.728 0.272 21.176 0.4 17.08C0.592 11.256 1.52 7.032 3.184 4.408C4.848 1.784 7.792 0.471998 12.016 0.471998L13.168 5.368C10.864 5.432 9.296 6.2 8.464 7.672C7.696 9.08 7.312 11.192 7.312 14.008H14.032V27.736H0.208ZM19.888 27.736C19.888 24.728 19.952 21.176 20.08 17.08C20.272 11.256 21.2 7.032 22.864 4.408C24.528 1.784 27.472 0.471998 31.696 0.471998L32.848 5.368C30.544 5.432 28.976 6.2 28.144 7.672C27.376 9.08 26.992 11.192 26.992 14.008H33.712V27.736H19.888Z"
+                        fill="#F7654A" />
+                  </svg>
+                  <p class="text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum
+                     является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный
+                     печатник создал большую коллекцию размеров и форм шрифтов.</p>
+               </div>
+               <h5 class="h5 author-reviews">Иванов Иван, <span class="company-reviews">ООО “Газпром-Арена”</span></h5>
+            </div>
+            <div class="reviews__wrapp-item">
+               <div class="reviews__wrapp-text">
+                  <svg class="reviews__wrapp-quotes" width="34" height="28" viewBox="0 0 34 28" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M0.208 27.736C0.208 24.728 0.272 21.176 0.4 17.08C0.592 11.256 1.52 7.032 3.184 4.408C4.848 1.784 7.792 0.471998 12.016 0.471998L13.168 5.368C10.864 5.432 9.296 6.2 8.464 7.672C7.696 9.08 7.312 11.192 7.312 14.008H14.032V27.736H0.208ZM19.888 27.736C19.888 24.728 19.952 21.176 20.08 17.08C20.272 11.256 21.2 7.032 22.864 4.408C24.528 1.784 27.472 0.471998 31.696 0.471998L32.848 5.368C30.544 5.432 28.976 6.2 28.144 7.672C27.376 9.08 26.992 11.192 26.992 14.008H33.712V27.736H19.888Z"
+                        fill="#F7654A" />
+                  </svg>
+                  <p class="text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum
+                     является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный
+                     печатник создал большую коллекцию размеров и форм шрифтов.</p>
+               </div>
+               <h5 class="h5 author-reviews">Иванов Иван, <span class="company-reviews">ООО “Газпром-Арена”</span></h5>
+            </div>
+            <div class="reviews__wrapp-item">
+               <div class="reviews__wrapp-text">
+                  <svg class="reviews__wrapp-quotes" width="34" height="28" viewBox="0 0 34 28" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M0.208 27.736C0.208 24.728 0.272 21.176 0.4 17.08C0.592 11.256 1.52 7.032 3.184 4.408C4.848 1.784 7.792 0.471998 12.016 0.471998L13.168 5.368C10.864 5.432 9.296 6.2 8.464 7.672C7.696 9.08 7.312 11.192 7.312 14.008H14.032V27.736H0.208ZM19.888 27.736C19.888 24.728 19.952 21.176 20.08 17.08C20.272 11.256 21.2 7.032 22.864 4.408C24.528 1.784 27.472 0.471998 31.696 0.471998L32.848 5.368C30.544 5.432 28.976 6.2 28.144 7.672C27.376 9.08 26.992 11.192 26.992 14.008H33.712V27.736H19.888Z"
+                        fill="#F7654A" />
+                  </svg>
+                  <p class="text">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне. Lorem Ipsum
+                     является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный
+                     печатник создал большую коллекцию размеров и форм шрифтов.</p>
+               </div>
+               <h5 class="h5 author-reviews">Иванов Иван, <span class="company-reviews">ООО “Газпром-Арена”</span></h5>
+            </div>
+         </div>
+      </div>
+   </section>
+   <!-- Request -->
+   <div class="request">
+      <div class="container">
+         <aside class="request__wrapp">
+            <h2 class="h2 request-h2">ХОТИТЕ С НАМИ РАБОТАТЬ?<br><span class="h3-span">ОСТАВЬТЕ ЗАЯВКУ И МЫ СВЯЖЕМСЯ С
+                  ВАМИ!</span>
+            </h2>
+            <button class="request__wrapp-button btn-hover" type="button">
+               <svg class="request__wrapp-img" width="18" height="15" viewBox="0 0 18 15" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M18 4.70312C17.6987 5.0346 17.3571 5.32589 16.9955 5.57701C15.3181 6.71205 13.6306 7.85714 11.9933 9.04241C11.1496 9.66518 10.1049 10.4286 9.01005 10.4286H9H8.98996C7.89509 10.4286 6.85045 9.66518 6.0067 9.04241C4.36942 7.8471 2.68192 6.71205 1.01451 5.57701C0.642857 5.32589 0.301339 5.0346 0 4.70312V12.6786C0 13.5625 0.723214 14.2857 1.60714 14.2857H16.3929C17.2768 14.2857 18 13.5625 18 12.6786V4.70312ZM18 1.75C18 0.866071 17.2667 0.142857 16.3929 0.142857H1.60714C0.532366 0.142857 0 0.986607 0 1.97098C0 2.88504 1.01451 4.02009 1.72768 4.50223C3.2846 5.58705 4.86161 6.67187 6.41853 7.76674C7.07143 8.21875 8.17634 9.14286 8.98996 9.14286H9H9.01005C9.82366 9.14286 10.9286 8.21875 11.5815 7.76674C13.1384 6.67187 14.7154 5.58705 16.2824 4.50223C17.1663 3.88951 18 2.875 18 1.75Z"
+                     fill="black" />
+               </svg>
+               ВАШ ЗАПРОС
+            </button>
+         </aside>
+      </div>
+   </div>
+   <!-- Footer -->
+   <section class="footer burger-anchor">
+      <div class="contacts">
+         <div class="container">
+            <h3 class="h3 h3-container">КОНТАКТЫ</h3>
+            <div class="contacts__wrapp">
+               <div class="contacts__wrapp-item">
+                  <svg class="contacts__wrapp-img" width="37" height="49" viewBox="0 0 37 49" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M18.5 0C8.46875 0 0.5 8.15625 0.5 18C0.5 24.75 2.65625 26.8125 14.6562 45.9375C16.4375 48.75 20.4688 48.75 22.25 45.9375C34.25 26.8125 36.5 24.75 36.5 18C36.5 8.0625 28.3438 0 18.5 0ZM18.5 43.5C6.5 24.375 5 23.1562 5 18C5 10.5938 11 4.5 18.5 4.5C25.9062 4.5 32 10.5938 32 18C32 23.1562 30.5 24.1875 18.5 43.5ZM11 18C11 22.2188 14.2812 25.5 18.5 25.5C22.625 25.5 26 22.2188 26 18C26 13.875 22.625 10.5 18.5 10.5C14.2812 10.5 11 13.875 11 18Z"
+                        fill="#F7654A" />
+                  </svg>
+                  <h4 class="h4 h4-margin">АДРЕС:</h4>
+                  <a class="contacts__wrapp-link"
+                     href="https://yandex.ru/maps/2/saint-petersburg/house/nevskiy_prospekt_140/Z0kYdQFpSUQFQFtjfXVzeHRmZw==/?ll=30.365660%2C59.930257&mode=search&sctx=ZAAAAAgAEAAaKAoSCQA8okJ17UJAEQiPNo5Y4UtAEhIJAAAAAIBHuj8RACBeADVLpD8oCjgAQPWoAUgBagJydXAAnQHNzEw9oAEAqAEAvQGvPpwuwgEJAAAAAAAAAAAA6gEA8gEA%2BAEAggI10J3QldCS0KHQmtCY0Jkg0J%2FQoNCe0KHQn9CV0JrQoiAxNDAsINCe0KTQmNChIDE0MC0xNDKKAgA%3D&sll=30.369012%2C59.929854&sspn=0.012832%2C0.004410&text=%D0%9D%D0%95%D0%92%D0%A1%D0%9A%D0%98%D0%99%20%D0%9F%D0%A0%D0%9E%D0%A1%D0%9F%D0%95%D0%9A%D0%A2%20140%2C%20%D0%9E%D0%A4%D0%98%D0%A1%20140-142&z=17"
+                     target="_blank">
+                     <h4 class="h4 h4-container h4-container-hover">НЕВСКИЙ ПРОСПЕКТ 140, ОФИС 140-142</h4>
+                  </a>
+               </div>
+               <div class="contacts__wrapp-item">
+                  <svg class="contacts__wrapp-img" width="49" height="48" viewBox="0 0 49 48" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M45.125 2.15625L36.3125 0.1875C34.25 -0.28125 32.1875 0.75 31.4375 2.625L27.3125 12.1875C26.5625 13.875 27.0312 15.9375 28.5312 17.1562L32.2812 20.25C29.6562 25.125 25.5312 29.1562 20.6562 31.875L17.5625 28.125C16.3438 26.625 14.2812 26.1562 12.5938 26.9062L3.03125 30.9375C1.15625 31.7812 0.125 33.8438 0.59375 35.9062L2.5625 44.7188C3.03125 46.6875 4.8125 48 6.78125 48C29.75 48 48.5 29.4375 48.5 6.375C48.5 4.40625 47.0938 2.625 45.125 2.15625ZM6.96875 43.5L5 35.0625L14.1875 31.125L19.4375 37.5C28.7188 33.0938 33.5 28.3125 37.9062 19.0312L31.5312 13.7812L35.4688 4.59375L44 6.5625C43.9062 26.9062 27.3125 43.4062 6.96875 43.5Z"
+                        fill="#F7654A" />
+                  </svg>
+                  <h4 class="h4 h4-margin">ТЕЛЕФОН:</h4>
+                  <a class="contacts__wrapp-link" href="tel:+78121112233">
+                     <h4 class="h4 h4-container h4-container-hover">8 (812) 111-22-33<br>8 (812) 111-22-33</h4>
+                  </a>
+               </div>
+               <div class="contacts__wrapp-item">
+                  <svg class="contacts__wrapp-img" width="47" height="48" viewBox="0 0 47 48" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M23.5 0.75C10.6562 0.75 0.25 11.1562 0.25 24C0.25 36.8438 10.6562 47.25 23.5 47.25C36.3438 47.25 46.75 36.8438 46.75 24C46.75 11.1562 36.3438 0.75 23.5 0.75ZM23.5 42.75C13.0938 42.75 4.75 34.4062 4.75 24C4.75 13.6875 13.0938 5.25 23.5 5.25C33.8125 5.25 42.25 13.6875 42.25 24C42.25 34.4062 33.8125 42.75 23.5 42.75ZM29.2188 33C29.7812 33.375 30.4375 33.2812 30.8125 32.7188L32.5938 30.375C32.9688 29.8125 32.875 29.1562 32.3125 28.7812L26.125 24.1875V10.875C26.125 10.3125 25.5625 9.75 25 9.75H22C21.3438 9.75 20.875 10.3125 20.875 10.875V26.3438C20.875 26.625 20.9688 27 21.25 27.1875L29.2188 33Z"
+                        fill="#F7654A" />
+                  </svg>
+                  <h4 class="h4 h4-margin">ВРЕМЯ РАБОТЫ:</h4>
+                  <h4 class="h4 h4-container">ПН-СБ<br>10:00 - 20:00</h4>
+               </div>
+               <div class="contacts__wrapp-item">
+                  <svg class="contacts__wrapp-img" width="49" height="36" viewBox="0 0 49 36" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                     <path
+                        d="M44 0H5C2.46875 0 0.5 2.0625 0.5 4.5V31.5C0.5 34.0312 2.46875 36 5 36H44C46.4375 36 48.5 34.0312 48.5 31.5V4.5C48.5 2.0625 46.4375 0 44 0ZM44 4.5V8.34375C41.8438 10.125 38.4688 12.75 31.3438 18.375C29.75 19.5938 26.6562 22.5938 24.5 22.5C22.25 22.5938 19.1562 19.5938 17.5625 18.375C10.4375 12.75 7.0625 10.125 5 8.34375V4.5H44ZM5 31.5V14.1562C7.0625 15.8438 10.1562 18.2812 14.75 21.9375C16.8125 23.5312 20.4688 27.0938 24.5 27C28.4375 27.0938 32 23.5312 34.1562 21.9375C38.75 18.2812 41.8438 15.8438 44 14.1562V31.5H5Z"
+                        fill="#F7654A" />
+                  </svg>
+                  <h4 class="h4 h4-margin">E-MAIL:</h4>
+                  <a class="contacts__wrapp-link" href="mailto:INFO@VIP.RU">
+                     <h4 class="h4 h4-container h4-container-hover">INFO@VIP.RU</h4>
+                  </a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="footer__bottom">
+         <div class="container footer__bottom-wrapp">
+            <p class="textplus">© 2019 Строительная компания</p>
+            <p class="textplus">Разработано лучшей студей</p>
+         </div>
+      </div>
+   </section>
+   <script src="js/script.js"></script>
 </body>
 
 </html>
