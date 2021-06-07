@@ -9,9 +9,7 @@
       .h4-margin {
          margin: 0;
       }
-      .h4-container-hover:hover {
-         color: $accent;
-      }
+    
       &__wrapp {
          display: grid;
          grid-template-columns: repeat(auto-fit, 255px);
@@ -28,10 +26,7 @@
          }
       }
 
-      .contacts__wrapp-img:hover {
-         transform: scale(1.5);
-         transition: 0.1s linear;
-      }
+    
    }
    &__bottom {
       padding-top: 30px;
@@ -43,3 +38,4 @@
       }
    }
 }
+

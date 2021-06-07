@@ -159,16 +159,65 @@ body {
    line-height: 21px;
    color: $gray;
 }
-.btn-hover {
-   transition: 0.1s linear;
-}
-.btn-hover:hover {
-   background: white;
-   color: $accent;
-   transform: scale(1.1);
-   transition: 0.1s linear;
-   path {
-      fill: $accent;
+
+// HOVER
+@media (min-width: 678px) {
+   //----------- Header
+   .h4-burger-hover:hover {
+      text-decoration: underline;
+   }
+   /* hover menu burger */
+   #menu__toggle:checked ~ .header__nav-box {
+      visibility: visible;
+   }
+   /* menu burger EXIT*/
+
+   //----------- Project
+   .project__card:hover {
+      transform: scale(1.02);
+      transition: 0.1s linear;
+   }
+   //Polsunok
+   .project__card:hover input[type="range"]::-webkit-slider-thumb {
+      box-shadow: 2px 2px 18px rgb(221, 113, 113);
+      transition: 0.1s linear;
+   }
+
+   //----------- Reviews
+   .reviews__wrapp-text:hover {
+      background: rgb(255, 241, 241);
+      box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.3);
+      transform: scale(1.8);
+      transition: scale, 0.2s linear;
+   }
+ 
+
+   //----------- Request
+   .btn-hover {
+      transition: 0.1s linear;
+   }
+   .btn-hover:hover {
+      background: white;
+      color: $accent;
+      transform: scale(1.1);
+      transition: 0.1s linear;
+      path {
+         fill: $accent;
+      }
+   }
+
+   //----------- Portfolio
+   .fa-chevron:hover {
+      color: white;
+      transition: 0.2s linear;
+   }
+
+   //-----------  Footer
+   .h4-container-hover:hover {
+      color: $accent;
+   }
+   .contacts__wrapp-img:hover {
+      transform: scale(1.5);
+      transition: 0.1s linear;
    }
 }
-

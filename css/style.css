@@ -206,22 +206,65 @@ body {
   color: #999999;
 }
 
-.btn-hover {
-  -webkit-transition: 0.1s linear;
-  transition: 0.1s linear;
-}
-
-.btn-hover:hover {
-  background: white;
-  color: #f7654a;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-  -webkit-transition: 0.1s linear;
-  transition: 0.1s linear;
-}
-
-.btn-hover:hover path {
-  fill: #f7654a;
+@media (min-width: 678px) {
+  .h4-burger-hover:hover {
+    text-decoration: underline;
+  }
+  /* hover menu burger */
+  #menu__toggle:checked ~ .header__nav-box {
+    visibility: visible;
+  }
+  /* menu burger EXIT*/
+  .project__card:hover {
+    -webkit-transform: scale(1.02);
+            transform: scale(1.02);
+    -webkit-transition: 0.1s linear;
+    transition: 0.1s linear;
+  }
+  .project__card:hover input[type="range"]::-webkit-slider-thumb {
+    -webkit-box-shadow: 2px 2px 18px #dd7171;
+            box-shadow: 2px 2px 18px #dd7171;
+    -webkit-transition: 0.1s linear;
+    transition: 0.1s linear;
+  }
+  .reviews__wrapp-text:hover {
+    background: #fff1f1;
+    -webkit-box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.3);
+            box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.3);
+    -webkit-transform: scale(1.8);
+            transform: scale(1.8);
+    -webkit-transition: scale, 0.2s linear;
+    transition: scale, 0.2s linear;
+  }
+  .btn-hover {
+    -webkit-transition: 0.1s linear;
+    transition: 0.1s linear;
+  }
+  .btn-hover:hover {
+    background: white;
+    color: #f7654a;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition: 0.1s linear;
+    transition: 0.1s linear;
+  }
+  .btn-hover:hover path {
+    fill: #f7654a;
+  }
+  .fa-chevron:hover {
+    color: white;
+    -webkit-transition: 0.2s linear;
+    transition: 0.2s linear;
+  }
+  .h4-container-hover:hover {
+    color: #f7654a;
+  }
+  .contacts__wrapp-img:hover {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+    -webkit-transition: 0.1s linear;
+    transition: 0.1s linear;
+  }
 }
 
 .header {
@@ -291,16 +334,6 @@ body {
   text-align: right;
 }
 
-.h4-burger-hover:hover {
-  text-decoration: underline;
-}
-
-/* hover menu burger */
-#menu__toggle:checked ~ .header__nav-box {
-  visibility: visible;
-}
-
-/* menu burger EXIT*/
 /* menu burger EXIT*/
 .project {
   padding: 250px 0 150px;
@@ -323,15 +356,9 @@ body {
 }
 
 .project__card-img {
-  cursor: pointer;
   width: 100%;
-}
-
-.project .project__card:hover {
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-  -webkit-transition: 0.1s linear;
-  transition: 0.1s linear;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .project input[type="range"] {
@@ -357,13 +384,6 @@ body {
   height: 8px;
   cursor: pointer;
   background: #f7654a;
-}
-
-.project input[type="range"]::-webkit-slider-thumb:hover {
-  -webkit-box-shadow: 2px 2px 18px #dd7171;
-          box-shadow: 2px 2px 18px #dd7171;
-  -webkit-transition: 0.1s linear;
-  transition: 0.1s linear;
 }
 
 input[type="range"]::-moz-range-progress {
@@ -563,12 +583,6 @@ input[type="range"]::-ms-fill-upper {
   transition: 0.2s linear;
 }
 
-.portfolio__big .fa-chevron:hover {
-  color: white;
-  -webkit-transition: 0.2s linear;
-  transition: 0.2s linear;
-}
-
 .portfolio__big .fa-chevron:active {
   color: #2b1f1f;
 }
@@ -644,15 +658,8 @@ input[type="range"]::-ms-fill-upper {
   background: #f7f7f7;
   padding: 38px 30px;
   margin-bottom: 30px;
-  cursor: pointer;
-  -webkit-transition: 0.1s linear;
-  transition: 0.1s linear;
-}
-
-.reviews__wrapp-text:hover {
-  background: #fff1f1;
-  -webkit-box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.3);
-          box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.3);
+  cursor: -webkit-zoom-in;
+  cursor: zoom-in;
   -webkit-transition: 0.1s linear;
   transition: 0.1s linear;
 }
@@ -682,10 +689,6 @@ input[type="range"]::-ms-fill-upper {
   margin: 0;
 }
 
-.footer .contacts .h4-container-hover:hover {
-  color: #f7654a;
-}
-
 .footer .contacts__wrapp {
   display: -ms-grid;
   display: grid;
@@ -705,13 +708,6 @@ input[type="range"]::-ms-fill-upper {
 }
 
 .footer .contacts__wrapp-img {
-  -webkit-transition: 0.1s linear;
-  transition: 0.1s linear;
-}
-
-.footer .contacts .contacts__wrapp-img:hover {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
   -webkit-transition: 0.1s linear;
   transition: 0.1s linear;
 }

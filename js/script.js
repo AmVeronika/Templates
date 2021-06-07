@@ -3,6 +3,7 @@ function init() {
    projectNum.classList.add('loading-grid');
 }
 //--------------------------------------------------------------
+//--------------------------------------------------------------
 // Плавная прокрутка для навигации
 let burgerLinks = document.querySelectorAll('.h4-burger-hover');
 let burgerAnchors = document.querySelectorAll('.burger-anchor');
@@ -16,6 +17,7 @@ for (let item of burgerLinks) {
       });
    }
 }
+//--------------------------------------------------------------
 //--------------------------------------------------------------
 //  Прокрутка сбоку к началу страницы 
 let btnUp = document.querySelector('.btn-up');
@@ -35,6 +37,38 @@ btnUp.onclick = () => {
    })
 }
 //--------------------------------------------------------------
+//--------------------------------------------------------------
+// Перелистывание фото в проектах при клике мыши на значение input
+let projectCardLinks = document.querySelectorAll('.project__card-link');//Блок ссылка, куда вставляется картинка, коллекция
+let projectCardImgs = document.querySelectorAll('.project__card-img');//Картинка с проекта, коллекция
+let reactangles = document.querySelectorAll('.reactangle');//Input ползунок, коллекция
+let reactanglesInput;// в каком блоке нажат инпут
+let reactanglesValue;// какое значение инпута в блоке
+for (let input of reactangles) {
+   input.onclick = () => {
+      reactanglesInput = input.getAttribute("data-inp");
+      reactanglesValue = input.value;
+      if (reactanglesInput) {
+
+         projectCardLinks[reactanglesInput].innerHTML = '';
+         if (reactanglesValue) {
+            projectCardImgs[reactanglesInput].src = 'img/project-arena-' + reactanglesValue + '.jpg';
+            projectCardLinks[reactanglesInput].append(projectCardImgs[reactanglesInput]);
+         }
+      }
+   }
+}
+//--------------------------------------------------------------
+// Перелистывание фото в проектах при наведении мыши на значение input (не работает)
+// reactangle.addEventListener ("mouseover", () => {
+//    reactangle.value;
+//    console.log();
+// projectCardLink.innerHTML = '';
+//    projectCardImg.src = 'img/project-arena-' + reactangle.value + '.jpg';
+//    projectCardLink.append(projectCardImg);
+// });
+//--------------------------------------------------------------
+//--------------------------------------------------------------
 // Галерея, открытие картинки в большом размере
 let portfolioBig = document.querySelector('.portfolio__big');
 let portfolioImg = document.querySelectorAll('.portfolio__img');
@@ -50,6 +84,7 @@ for (let photo of portfolioImg) {
       leftStep = +photo.getAttribute('data-alt');//Для перелистывания картинок в портфолио
    })
 }
+//--------------------------------------------------------------
 // Закрыть просмотр фото
 portfolioBig.onclick = (e) => {
    switch (e.target) {
@@ -58,6 +93,16 @@ portfolioBig.onclick = (e) => {
          break;
    }
 }
+//--------------------------------------------------------------
+// При нажатии Esc 
+window.onkeydown = (evt) => {
+   if (evt.keyCode == 27) {
+      portfolioBig.style.display = "none";
+   }
+   // или <body onkeydown="ESCclose(event)">
+}
+//--------------------------------------------------------------
+//--------------------------------------------------------------
 // Перелистывание фото влево, вправо
 let portfolioBtns = document.querySelectorAll('.fa-chevron');
 let quantityImg = portfolioImg.length - 1;//Счётчик для переключения, кол-во мини фоток 
@@ -102,10 +147,8 @@ for (let btn of portfolioBtns)
             break;
       }
       portfolioImgBig.src = 'img/portfolio-img-' + leftStep + '.jpg';
-
    })
-
-
+//--------------------------------------------------------------
 //--------------------------------------------------------------
 // Настройка открытия отзывов details
 let questionDetails = document.querySelectorAll('.question__block-open');
@@ -122,12 +165,7 @@ for (let item of questionDetails) {
             break;
       }
    })
-
-
 }
-
-
-
 
 // Инициализация
 window.onload = init;
