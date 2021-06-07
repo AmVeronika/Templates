@@ -49,11 +49,8 @@ for (let input of reactangles) {
       reactanglesInput = input.getAttribute("data-inp");
       reactanglesValue = input.value;
       if (reactanglesInput) {
-
-         projectCardLinks[reactanglesInput].innerHTML = '';
          if (reactanglesValue) {
             projectCardImgs[reactanglesInput].src = 'img/project-arena-' + reactanglesValue + '.jpg';
-            projectCardLinks[reactanglesInput].append(projectCardImgs[reactanglesInput]);
          }
       }
    }

@@ -215,12 +215,6 @@ body {
     visibility: visible;
   }
   /* menu burger EXIT*/
-  .project__card:hover {
-    -webkit-transform: scale(1.02);
-            transform: scale(1.02);
-    -webkit-transition: 0.1s linear;
-    transition: 0.1s linear;
-  }
   .project__card:hover input[type="range"]::-webkit-slider-thumb {
     -webkit-box-shadow: 2px 2px 18px #dd7171;
             box-shadow: 2px 2px 18px #dd7171;
@@ -593,6 +587,7 @@ input[type="range"]::-ms-fill-upper {
 
 .question__block {
   max-width: 730px;
+  height: 495px;
 }
 
 .question__block-open[open] .textplus-question {

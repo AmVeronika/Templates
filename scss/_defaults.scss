@@ -173,10 +173,7 @@ body {
    /* menu burger EXIT*/
 
    //----------- Project
-   .project__card:hover {
-      transform: scale(1.02);
-      transition: 0.1s linear;
-   }
+
    //Polsunok
    .project__card:hover input[type="range"]::-webkit-slider-thumb {
       box-shadow: 2px 2px 18px rgb(221, 113, 113);
@@ -190,7 +187,6 @@ body {
       transform: scale(1.8);
       transition: scale, 0.2s linear;
    }
- 
 
    //----------- Request
    .btn-hover {
