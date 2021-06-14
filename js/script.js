@@ -111,7 +111,7 @@ for (let btn of portfolioBtns)
          case 'left'://Если левая нажата кнопка 
             leftStep--;
             if (leftStep == -1) {
-               leftStep = portfolioImg.length - 1;
+               leftStep = quantityImg;
             }
             //------------------------
             // portfolioBigWrapp.innerHTML = '';
@@ -122,7 +122,7 @@ for (let btn of portfolioBtns)
             // portfolioBigWrapp.append(portfolioImgBig);
             // console.log(portfolioImgBigClass[0]);
             // if (portfolioImgBigClass[0] == 0) {
-            //    portfolioImgBig.src = 'img/portfolio-img-' + (portfolioImg.length - 1) + '.jpg';
+            //    portfolioImgBig.src = 'img/portfolio-img-' + quantityImg + '.jpg';
             // }
             break;
          case 'right'://Если правая нажата кнопка 
@@ -138,7 +138,7 @@ for (let btn of portfolioBtns)
             // portfolioImgBig.src = 'img/portfolio-img-' + (+portfolioImgBigClass[0] + 1) + '.jpg';
 
             // portfolioBigWrapp.append(portfolioImgBig);
-            // if (portfolioImgBigClass[0] == portfolioImg.length - 1) {
+            // if (portfolioImgBigClass[0] == quantityImg) {
             //    portfolioImgBig.src = 'img/portfolio-img-' + 0 + '.jpg';
             // }
             break;
